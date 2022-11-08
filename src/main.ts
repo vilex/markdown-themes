@@ -4,7 +4,8 @@ import './themes/sneh/sneh.scss'
 
 const mi = new MarkdownIt()
 
-const html = mi.render(MdFile)
+const app = document.querySelector('#app')
+app!.className = 'md-sneh'
 
 fetch(MdFile)
     .then(
@@ -13,7 +14,3 @@ fetch(MdFile)
                 content => app!.innerHTML = mi.render(content)
             )
     )
-
-
-const app = document.querySelector('#app')
-app!.className = 'md-sneh'
