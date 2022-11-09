@@ -4,7 +4,6 @@ import MarkdownIt from 'markdown-it'
 import hljs from 'highlight.js'
 import MdFile from './files/component.md'
 
-
 const md = new MarkdownIt({
     highlight: (content, lang) => {
         if (lang && hljs.getLanguage(lang)) {
