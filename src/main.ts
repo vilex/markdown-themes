@@ -1,5 +1,4 @@
 import './theme/index.scss'
-// import 'highlight.js/styles/default.css'
 
 import MarkdownIt from 'markdown-it'
 import hljs from 'highlight.js'
@@ -9,7 +8,7 @@ import MdFile from './files/component.md'
 const md = new MarkdownIt({
     highlight: (content, lang) => {
         if (lang && hljs.getLanguage(lang)) {
-            return `<pre class="hljs"><code>${hljs.highlight(lang, content, true).value}</code></pre>`
+            return hljs.highlight(lang, content, true).value
         }
     }
 })
