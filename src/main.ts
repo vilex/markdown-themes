@@ -1,16 +1,12 @@
 import MarkdownIt from 'markdown-it'
 import MdFile from './files/component.md'
-import './themes/sneh/sneh.scss'
+import './theme/index.scss'
 
 const mi = new MarkdownIt()
 
-const app = document.querySelector('#app')
-app!.className = 'md-sneh'
+const result = await fetch(MdFile)
+const content = await result.text()
 
-fetch(MdFile)
-    .then(
-        res => res.text()
-            .then(
-                content => app!.innerHTML = mi.render(content)
-            )
-    )
+const app = document.querySelector('#app')!
+app.className = 'markdown-theme'
+app.innerHTML = mi.render(content)
