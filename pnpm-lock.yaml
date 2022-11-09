@@ -2,9 +2,13 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/markdown-it': ^12.2.3
+  highlight.js: ^11.6.0
   markdown-it: ^13.0.1
   sass: ^1.56.0
   vite: ^3.2.3
+
+dependencies:
+  highlight.js: 11.6.0
 
 devDependencies:
   '@types/markdown-it': 12.2.3
@@ -333,6 +337,11 @@ packages:
     dependencies:
       function-bind: 1.1.1
     dev: true
+
+  /highlight.js/11.6.0:
+    resolution: {integrity: sha512-ig1eqDzJaB0pqEvlPVIpSSyMaO92bH1N2rJpLMN/nX396wTpDA4Eq0uK+7I/2XG17pFaaKE0kjV/XPeGt7Evjw==}
+    engines: {node: '>=12.0.0'}
+    dev: false
 
   /immutable/4.1.0:
     resolution: {integrity: sha512-oNkuqVTA8jqG1Q6c+UglTOD1xhC1BtjKI7XkCXRkZHrN5m18/XsnUp8Q89GkQO/z+0WjonSvl0FLhDYftp46nQ==}
