@@ -41,7 +41,7 @@ createElement('div', [
 我猜你可能还发现了一个问题，就是我们一直写 `createElement` 很麻烦对不对，这是也是我遇到的问题，所以 `vilex` 中又提供对这些基础标签组件的一个简单的封装，可以直接从 `vilex` 中导入 `div`、`button`、`input`、`a`......等，我们常用到的标签都可以通过这种方式来使用。下面来演示一下效果：
 
 ```typescript
-div(
+div( 
 	p('text content'),
   button('button')
 )
