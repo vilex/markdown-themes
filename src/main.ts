@@ -13,9 +13,12 @@ const md = new MarkdownIt({
     }
 })
 
-const result = await fetch(MdFile)
-const content = await result.text()
+const run = async () => {
+    const result = await fetch(MdFile)
+    const content = await result.text()
+    const app = document.querySelector('#app')!
+    app.className = 'markdown-theme'
+    app.innerHTML = md.render(content)
+}
 
-const app = document.querySelector('#app')!
-app.className = 'markdown-theme'
-app.innerHTML = md.render(content)
+run()
